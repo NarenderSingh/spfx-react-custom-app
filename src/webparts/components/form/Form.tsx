@@ -1,15 +1,19 @@
 import * as React from "react";
-import dataService from "../../services/data.service";
-import pnpService from "../../services/pnp.service";
+import DataService from "../../services/data.service";
+import PnpService from "../../services/pnp.service";
 
 class Form extends React.Component<any, any> {
-  constructor(props) {
+  constructor(
+    props: any,
+    private dataService: DataService,
+    private pnpService: PnpService
+  ) {
     super(props);
 
-    this.state = {
-      dataService: new dataService(this.props.context),
-      pnpService: new pnpService(this.props.context)
-    };
+    this.state = {};
+
+    this.dataService = new DataService(this.props.context);
+    this.pnpService = new PnpService(this.props.context);
   }
 
   componentDidMount() {
@@ -17,20 +21,15 @@ class Form extends React.Component<any, any> {
   }
 
   getData = () => {
-    this.state.dataService.getListData().then(d => {
-      console.log("Form Data", d);
-    });
-  };
-
-  getDataSecondWay = () => {
-    let service = new dataService(this.props.context);
-    service.getListData().then(d => {
-      console.log("Form Data 2", d);
+    this.dataService.getListData().then(d => {
+      console.log("Form Data =>", d);
     });
   };
 
   getDataByPnp = () => {
-    this.state.pnpService.getListData();
+    this.pnpService.getListData().then(d => {
+      console.log("Employee Details =>", d);
+    });
   };
 
   public render() {
@@ -38,13 +37,10 @@ class Form extends React.Component<any, any> {
       <div>
         <h4>Form Component</h4>
         <button type="button" onClick={this.getData}>
-          Get Form Data
-        </button>
-        <button type="button" onClick={this.getDataSecondWay}>
-          Get Form Data 2
+          SERVICE PROMISE
         </button>
         <button type="button" onClick={this.getDataByPnp}>
-          Get From Data PNP
+          SERVICE PNP
         </button>
       </div>
     );

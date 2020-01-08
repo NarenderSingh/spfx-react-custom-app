@@ -2,7 +2,9 @@ import * as React from "react";
 import { SPHttpClient, SPHttpClientResponse } from "@microsoft/sp-http";
 
 class Home extends React.Component<any, any> {
-  componentDidMount() {
+  componentDidMount() {}
+
+  getListsDetails = () => {
     this.props.context.spHttpClient
       .get(
         this.props.context.pageContext.web.absoluteUrl +
@@ -12,7 +14,7 @@ class Home extends React.Component<any, any> {
       .then((response: SPHttpClientResponse) => {
         console.log("LIST DATA", response.json());
       });
-  }
+  };
 
   public render() {
     return (

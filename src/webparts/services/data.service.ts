@@ -7,7 +7,7 @@ export default class DataService {
     this.context = context;
   }
 
-  getListData(): Promise<any> {
+  async getListData(): Promise<any> {
     return this.context.spHttpClient
       .get(
         this.context.pageContext.web.absoluteUrl +
