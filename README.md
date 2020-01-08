@@ -5,6 +5,11 @@
 1. @pnp
 2. Promise
 
+3. Bootstrap
+4. Material
+
+5. React-Icon [npm install react-icons --save]
+
 This is where you include your WebPart documentation.
 
 ### Building the code
