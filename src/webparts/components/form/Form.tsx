@@ -36,10 +36,18 @@ class Form extends React.Component<any, any> {
     return (
       <div>
         <h4>Form Component</h4>
-        <button type="button" onClick={this.getData}>
+        <button
+          type="button"
+          className="btn btn-sm btn-outline-warning"
+          onClick={this.getData}
+        >
           SERVICE PROMISE
         </button>
-        <button type="button" onClick={this.getDataByPnp}>
+        <button
+          type="button"
+          className="btn btn-sm btn-outline-warning"
+          onClick={this.getDataByPnp}
+        >
           SERVICE PNP
         </button>
       </div>

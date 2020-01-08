@@ -1,9 +1,10 @@
 import * as React from "react";
+import { SPComponentLoader } from "@microsoft/sp-loader";
 import styles from "./App.module.scss";
 import Home from "../../components/home/Home";
 import Form from "../../components/form/Form";
-import Material from "../../components/design/material/Material";
-import { SPComponentLoader } from "@microsoft/sp-loader";
+import Material from "../../components/design/Material";
+import ReactIcon from "../../components/design/ReactIcon";
 
 export interface IAppProps {
   description: string;
@@ -21,6 +22,10 @@ export default class App extends React.Component<IAppProps, {}> {
     SPComponentLoader.loadCss(
       "https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     );
+
+    SPComponentLoader.loadCss(
+      "https://localhost:4321/src/webparts/styles/style.css"
+    );
   }
 
   public render(): React.ReactElement<IAppProps> {
@@ -30,38 +35,47 @@ export default class App extends React.Component<IAppProps, {}> {
           <div className={styles.row}>
             <div className={styles.column}>
               <span className={styles.title}>
-                Welcome to SharePoint Framework!
+                <h4> Welcome to SharePoint Framework!</h4>
+                <hr />
                 <Home context={this.props.context} />
+                <hr />
                 <Form context={this.props.context} />
-                <button type="button" className="btn btn-primary">
-                  Primary
-                </button>
-                <button type="button" className="btn btn-secondary">
-                  Secondary
-                </button>
-                <button type="button" className="btn btn-success">
-                  Success
-                </button>
-                <button type="button" className="btn btn-danger">
-                  Danger
-                </button>
-                <button type="button" className="btn btn-warning">
-                  Warning
-                </button>
-                <button type="button" className="btn btn-info">
-                  Info
-                </button>
-                <button type="button" className="btn btn-light">
-                  Light
-                </button>
-                <button type="button" className="btn btn-dark">
-                  Dark
-                </button>
-                <button type="button" className="btn btn-link">
-                  Link
-                </button>
+                <hr />
+                <div className="row">
+                  <div className="col">
+                    <button type="button" className="btn btn-sm btn-primary">
+                      Primary
+                    </button>
+                    <button type="button" className="btn btn-sm btn-secondary">
+                      Secondary
+                    </button>
+                    <button type="button" className="btn btn-sm btn-success">
+                      Success
+                    </button>
+                    <button type="button" className="btn btn-sm btn-danger">
+                      Danger
+                    </button>
+                    <button type="button" className="btn btn-sm btn-warning">
+                      Warning
+                    </button>
+                    <button type="button" className="btn btn-sm btn-info">
+                      Info
+                    </button>
+                    <button type="button" className="btn btn-sm btn-light">
+                      Light
+                    </button>
+                    <button type="button" className="btn btn-sm btn-dark">
+                      Dark
+                    </button>
+                    <button type="button" className="btn btn-sm btn-link">
+                      Link
+                    </button>
+                  </div>
+                </div>
                 <hr />
                 <Material />
+                <hr />
+                <ReactIcon />
               </span>
             </div>
           </div>

@@ -5,10 +5,10 @@
 1. @pnp
 2. Promise
 
-3. Bootstrap
-4. Material
+3. Bootstrap [https://getbootstrap.com/]
+4. Material [https://materializecss.com/checkboxes.html]
 
-5. React-Icon [npm install react-icons --save]
+5. React-Icon [npm install react-icons --save][https://react-icons.netlify.com/#/]
 
 This is where you include your WebPart documentation.
 
@@ -18,19 +18,7 @@ This is where you include your WebPart documentation.
 git clone the repo
 npm i
 npm i -g gulp
-gulp
+yarn install
+gulp serve
+gulp package-solution
 ```
-
-This package produces the following:
-
-- lib/\* - intermediate-stage commonjs build artifacts
-- dist/\* - the bundled script, along with other resources
-- deploy/\* - all resources which should be uploaded to a CDN.
-
-### Build options
-
-gulp clean - TODO
-gulp test - TODO
-gulp serve - TODO
-gulp bundle - TODO
-gulp package-solution - TODO
