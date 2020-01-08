@@ -20,9 +20,12 @@
     "@pnp/logging": "^2.0.0",
     "@pnp/odata": "^2.0.0",
     "@pnp/sp": "^2.0.0",
+    "classnames": "^2.2.6",
     "install": "^0.13.0",
     "npm": "^6.13.4",
     "office-ui-fabric-react": "6.189.2",
+    "primeicons": "^2.0.0",
+    "primereact": "^3.3.3",
     "react": "16.8.5",
     "react-dom": "16.8.5",
     "react-icons": "^3.8.0"

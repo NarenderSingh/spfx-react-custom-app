@@ -10,6 +10,9 @@
 
 5. React-Icon [npm install react-icons --save][https://react-icons.netlify.com/#/]
 
+6. Prime React [https://www.primefaces.org/primereact/#/setup]<br>[npm install primereact --save] <br>
+   [npm install primeicons --save]
+
 This is where you include your WebPart documentation.
 
 ### Building the code

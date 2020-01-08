@@ -9,3 +9,34 @@ body {
 #workbenchPageContent {
   max-width: 1450px !important;
 }
+
+.pageTitle_95760b19 {
+  display: none !important;
+}
+
+.spNav_f7fd2212 {
+  display: none !important;
+}
+
+.root-64 {
+  display: none !important;
+}
+
+.commentsWrapper_1fcf10d5 {
+  display: none !important;
+}
+
+#SuiteNavPlaceHolder {
+  display: none !important;
+}
+
+@media screen and (min-width: 641px) {
+  .CanvasZone {
+    display: block !important;
+    margin-top: -25px !important;
+  }
+}
+
+.app_76d0ddb1 .row_76d0ddb1 {
+  margin-right: -113px !important;
+}

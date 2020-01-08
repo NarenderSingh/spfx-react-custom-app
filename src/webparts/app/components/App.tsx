@@ -5,6 +5,7 @@ import Home from "../../components/home/Home";
 import Form from "../../components/form/Form";
 import Material from "../../components/design/Material";
 import ReactIcon from "../../components/design/ReactIcon";
+import PrimeReact from "../../components/prime-react/PrimeReact";
 
 export interface IAppProps {
   description: string;
@@ -76,6 +77,8 @@ export default class App extends React.Component<IAppProps, {}> {
                 <Material />
                 <hr />
                 <ReactIcon />
+                <hr />
+                {/* <PrimeReact /> */}
               </span>
             </div>
           </div>
